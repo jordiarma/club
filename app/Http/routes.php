@@ -23,6 +23,26 @@ Route::get('/test', function(){
 	echo "Esto es una simple prueba!!";
 });
 
+Route::get('/probando/ruta', function(){
+	//código a ejecutar cuando se produzca esa ruta y el verbo 
+	return 'get';
+});
+
+Route::post('/probando/ruta', function(){
+	//código a ejecutar cuando se produzca esa rutay el verbo POST
+	return 'post';
+});
+
+Route::put('/probando/ruta', function(){
+	//código a ejecutar cuando se produzca esa rutay el verbo PUT
+	return 'put';
+});
+
+Route::delete('/probando/ruta', function(){
+	//código a ejecutar cuando se produzca esa rutay el verbo DELETE
+	return 'delete';
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
