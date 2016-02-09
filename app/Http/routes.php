@@ -43,6 +43,30 @@ Route::delete('/probando/ruta', function(){
 	return 'delete';
 });
 
+Route::get('colaboradores/{nombre}', function($nombre){
+	return "Mostrando el colaborador $nombre";
+});
+
+Route::get('agenda/{mes}/{ano}', function($mes, $ano){
+	return "Viendo la agenda de $mes de $ano";
+});
+
+Route::get('/jugador/{id}','Jugador@nombre');
+
+Route::post('/equip/editar/{id}', 'Equip@editar');
+
+Route::get('equip/{categoria}', function($categoria){
+	return "Cadet A + Cadet B";
+});
+
+Route::get('/equip/{categoria}/{nom}', 'Equip@ver')->where(array('nom' => '[a-cA-C]+'));
+
+Route::get('/equip/', 'Equip@recibirPost');
+
+Route::get('/equipos', function(){
+	dd(\App\Equip::all());
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
